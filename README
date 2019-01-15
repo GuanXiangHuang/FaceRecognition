@@ -1,0 +1,15 @@
+Face recognition and identification program that frames any detected faces and/or eyes and smiles.
+Can differentiate and recognize different faces by identifying any detected faces with a label containing the persons name.
+
+Need to have Python 3.7 and OpenCV installed on the machine.
+Will also need to install Pillow via the Python shell.
+You must have a functional webcam connected to your computer in order to test this program.
+
+How to run:
+1. Create a folder in the "cascade" folder and give the folder the name of a person that you would like to identify
+2. Upload multiple pictures of the persons face that you would like to identify in the created folder in cascade 
+3. Open the terminal and train your system with the newly added images by typing the command: python faces-train.py
+4. Once it finishes to run, enter the following command to start the recognition program: python faces.py
+5. Your webcam should turn on and a pop up of the video will appear
+
+Uploading more pictures will improve the accuracy of this program since the system will have more material to train from.
