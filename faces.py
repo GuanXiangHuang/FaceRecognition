@@ -32,7 +32,7 @@ while(True):
 		id_, conf = recognizer.predict(roi_gray)
 		if conf>= 45 and conf<= 85:
 			#print(id_)
-			#print(labels[id_])
+			print(labels[id_])
 			font = cv2.FONT_HERSHEY_SIMPLEX
 			name = labels[id_]
 			color = (255, 255, 255)
