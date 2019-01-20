@@ -1,7 +1,7 @@
 Face recognition and identification program that frames any detected faces and/or eyes and smiles.
 Can differentiate and recognize different faces by identifying any detected faces with a label containing the persons name.
 
-Need to have Python 3.7 and OpenCV installed on the machine.
+Need to have Python 3 and higher and OpenCV installed on the machine.
 Will also need to install Pillow via the Python shell.
 You must have a functional webcam connected to your computer in order to test this program.
 
