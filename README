@@ -8,9 +8,10 @@ You must have a functional webcam connected to your computer in order to test th
 How to run:
 1. In the "image" folder, add a folder and give the folder the name of a person that you would like to identify. This step can be repeated.
 2. Upload multiple pictures of the persons face that you would like to identify in the created folder.
-3. Open the terminal and go into the directory where the files are located.
-4. Train your system with the newly added images by typing the command: python faces-train.py
-5. Once it finishes to run, enter the following command to start the recognition program: python faces.py
-6. Your webcam should turn on and a pop up of the video will appear
+3. Generate the YML file with the images.
+4. Open the terminal and go into the directory where the files are located.
+5. Train your system with the newly added images by typing the command: python faces-train.py
+6. Once it finishes to run, enter the following command to start the recognition program: python faces.py
+7. Your webcam should turn on and a pop up of the video will appear
 
 Uploading more pictures will improve the accuracy of this program since the system will have more material to train from.
