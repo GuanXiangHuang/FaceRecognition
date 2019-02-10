@@ -9,6 +9,7 @@ smile_cascade = cv2.CascadeClassifier('cascades/data/haarcascade_smile.xml')
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read("trainer.yml")
 
+#using pickle
 labels = {}
 with open("labels.pickle",'rb') as f:
 	og_labels = pickle.load(f)
@@ -30,8 +31,9 @@ while(True):
 
 		#recognize with deep learned model like tensorflow
 		id_, conf = recognizer.predict(roi_gray)
+		#accuracy
 		if conf>= 45 and conf<= 85:
-			#print(id_)
+			#print(id_), prints the name of the face detected on console
 			print(labels[id_])
 			font = cv2.FONT_HERSHEY_SIMPLEX
 			name = labels[id_]
@@ -49,6 +51,8 @@ while(True):
 		end_cord_x = x + w
 		end_cord_y = y + h
 		cv2.rectangle(frame, (x, y),(end_cord_x, end_cord_y), color, stroke)
+		
+		#adds eye detection, can change it for smile detection
 		subitems = eye_cascade.detectMultiScale(roi_gray)
 		for(ex,ey,ew,eh) in subitems:
 			cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
